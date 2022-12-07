@@ -1,4 +1,3 @@
-
 current = 0
 prev = 0
 top3 = [0,0,0]
