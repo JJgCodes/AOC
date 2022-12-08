@@ -38,4 +38,9 @@ you would get a total score of 12.
 
 Following the Elf's instructions for the second column, what would your total score be if everything goes exactly according to your strategy guide?
 
-result
+Result = 10334.
+
+
+Reflection;
+
+Better way would be some kind of inversion of data rather than explicitly defining each game type.

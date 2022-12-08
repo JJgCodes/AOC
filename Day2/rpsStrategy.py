@@ -23,9 +23,9 @@ playerDictionary = {
 }
 
 results = {
-    'WIN': 6,
-    'LOSS': 0,
-    'TIE': 3,
+    'Z': 6,
+    'X': 0,
+    'Y': 3,
 }
 
 points = {
@@ -36,20 +36,29 @@ points = {
 
 #  not the best way could be improved. 
 def checkResults(opponent, player):
-    if opponent == player:
-        return 'TIE'
-    elif opponent == 'ROCK' and player == 'SCISSORS':
-        return 'LOSS'
-    elif opponent == 'ROCK' and player == 'PAPER':
-        return 'WIN'
-    elif opponent == 'PAPER' and player == 'ROCK':
-        return 'LOSS'
-    elif opponent == 'PAPER' and player == 'SCISSORS':
-        return 'WIN'
-    elif opponent == 'SCISSORS' and player == 'PAPER':
-        return 'LOSS'
-    elif opponent == 'SCISSORS' and player == 'ROCK': 
-        return 'WIN'
+    if opponent == 'ROCK' and player == 'Y':
+        return 'ROCK'
+    elif opponent == 'ROCK' and player == 'Z':
+        return 'PAPER'
+    elif opponent == 'ROCK' and player == 'X':
+        return 'SCISSORS'
+    
+    if opponent == 'PAPER' and player == 'Y':
+            return 'PAPER'
+    elif opponent == 'PAPER' and player == 'Z':
+        return 'SCISSORS'
+    elif opponent == 'PAPER' and player == 'X':
+        return 'ROCK'
+    
+    if opponent == 'SCISSORS' and player == 'Y':
+            return 'SCISSORS'
+    elif opponent == 'SCISSORS' and player == 'Z':
+        return 'ROCK'
+    elif opponent == 'SCISSORS' and player == 'X':
+        return 'PAPER'
+    
+    # if opponent  == rock and player == y
+    #  return draw and rock
  
 
 
@@ -58,14 +67,13 @@ def playGame(game):
     playerScore = 0
     for play in game:
         opponentPlays = opponentDictionary.get(play[0][0])
-        playerPlays = playerDictionary.get(play[0][-1])
+        playerPlays = play[0][-1]
         outcome = checkResults(opponentPlays,playerPlays)
-        playerScore += results.get(outcome) + points.get(playerPlays)
+        playerScore += points.get(outcome) + results.get(playerPlays)
         
     return playerScore
         
         
 outcome = playGame(getData())
-
 
 print(outcome)
