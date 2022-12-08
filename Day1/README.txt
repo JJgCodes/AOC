@@ -25,6 +25,12 @@ This list represents the Calories of the food carried by five Elves
  and so on
 
 From input.txt ; 
+
+P1:
 Find the Elf carrying the most Calories. How many total Calories is that Elf carrying?
 
 Result = 75622
+
+P2: 
+Find the top three Elves carrying the most Calories. How many Calories are those Elves carrying in total?
+Result = 213159
