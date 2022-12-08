@@ -1,7 +1,6 @@
 --- Day 2: Rock Paper Scissors ---
 
 Sample data ; 
-
 For example, suppose you were given the following strategy guide:
 
 A Y
@@ -22,7 +21,9 @@ The third round is a draw with both players choosing Scissors, giving you a scor
 In this example, if you were to follow the strategy guide, you would get a total score of 15 (8 + 1 + 6).
 
 puzzleData ; 
-
+P1:
 What would your total score be if everything goes exactly according to your strategy guide?
 
-Answer = 
+Result = 10404
+
+p:2

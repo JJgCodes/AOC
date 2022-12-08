@@ -4,7 +4,7 @@ top3 = [0,0,0]
 count = 0
 
 import csv
-with open('input.txt') as fd:
+with open('day1/input.txt') as fd:
     reader = csv.reader(fd)
     for row in reader: 
         if row != []:
